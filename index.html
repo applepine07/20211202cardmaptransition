@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Transition動畫和地圖影片</title>
+    <!-- bootstrap要用的 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <!-- fontawesome要用的 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- 自己的css -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <style>
+        /* .carousel .carousel-item {
+            height: 500px;
+        }
+
+        .carousel .carousel-item img {
+            min-height: 300px;
+            max-height: 500px;
+            object-fit: cover;
+        } */
+    </style>
+
+</head>
+
+<body style="height: 2000px;">
+
+    <!-- nav -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="#">Logo</a>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#link-tabs">Tabs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <!-- nav end-->
+
+    <!-- carousel -->
+    <div class="container-fluid">
+        <div class="row">
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://picsum.photos/id/1026/1920/1000" class="d-block w-100 h-100" alt="page1">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://picsum.photos/id/1027/1920/1000" class="d-block w-100 h-100" alt="page2">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://picsum.photos/id/1032/1920/1000" class="d-block w-100" alt="page3">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://picsum.photos/id/1011/1920/1000" class="d-block w-100" alt="page2">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://picsum.photos/id/1023/1920/1000" class="d-block w-100" alt="page3">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions"
+                    data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions"
+                    data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <!-- carousel end -->
+
+    <!-- tabs -->
+    <div class="container mt-5" id="link-tabs">
+        <h2>Dynamic Tabs</h2>
+        <br>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs justify-content-around">
+            <li class="nav-item">
+                <!-- <a class="nav-link active" href="#page1">Page 1</a> -->
+                <a class="nav-link" href="#page1">Page 1</a>
+            </li>
+            <li class="nav-item">
+                <!-- <a class="nav-link" href="#page2">Page 2</a> -->
+                <a class="nav-link active" href="#page2">Page 2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#page3">Page 3</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <!-- active 預設顯示 -->
+            <!-- <div id="page1" class="container tab-pane active"><br> -->
+            <div id="page1" class="container tab-pane fade"><br>
+                <!-- 第一排 -->
+                <div class="row">
+                    <!-- col-md-4 -->
+                    <div class="col-md-4">
+                        <div class="card w-80">
+                            <img src="https://picsum.photos/id/1023/400/300" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col-md-4 end-->
+                    <!-- col-md-4 -->
+                    <div class="col-md-4">
+                        <div class="card w-80">
+                            <img src="https://picsum.photos/id/1024/400/300" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col-md-4 end-->
+                    <!-- col-md-4 -->
+                    <div class="col-md-4">
+                        <div class="card w-80">
+                            <img src="https://picsum.photos/id/1025/400/300" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col-md-4 end-->
+
+
+
+                </div>
+                <!-- 第一排end -->
+
+                <!-- 第二排 -->
+                <div class="row mt-5">
+                    <!-- col-md-4 -->
+                    <div class="col-md-4">
+                        <div class="card w-80">
+                            <img src="https://picsum.photos/id/1026/400/300" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col-md-4 end-->
+                    <!-- col-md-4 -->
+                    <div class="col-md-4">
+                        <div class="card w-80">
+                            <img src="https://picsum.photos/id/1027/400/300" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col-md-4 end-->
+                    <!-- col-md-4 -->
+                    <div class="col-md-4">
+                        <div class="card w-80">
+                            <img src="https://picsum.photos/id/1028/400/300" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col-md-4 end-->
+
+
+
+                </div>
+                <!-- 第二排end -->
+            </div>
+            <!-- <div id="page2" class="container tab-pane fade"><br> -->
+            <div id="page2" class="container tab-pane active"><br>
+                <!-- tab row 1 -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="box">
+                            <div class="icon text-success py-3 ">
+                                <i class="fas fa-child fa-5x"></i>
+                            </div>
+                            <h3 class="text-secondary">Child</h3>
+                            <div class="line bg-success"></div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, error?</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="box">
+                            <div class="icon text-primary py-3 ">
+                                <i class="fas fa-cat fa-5x"></i>
+                            </div>
+                            <h3 class="text-secondary">Cat</h3>
+                            <div class="line bg-primary"></div>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, dolorem.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="box">
+                            <div class="icon text-warning py-3 ">
+                                <i class="fas fa-bus fa-5x "></i>
+                            </div>
+                            <h3 class="text-secondary">Bus</h3>
+                            <div class="line bg-warning"></div>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, atque?</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- tab row 1 end-->
+                <!-- tab row 2 -->
+                <div class="row">
+                    <div class="col-md-2 col-sm-4 col-6 text-center">
+                        <div class="box">
+                            <i class="fas fa-bicycle fa-2x text-secondary"></i>
+                            <h5 class="mt-3 text-secondary">Lorem ipsum dolor sit amet.</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-6 text-center">
+                        <div class="box">
+                            <i class="fas fa-bicycle fa-2x text-secondary"></i>
+                            <h5 class="mt-3 text-secondary">Lorem ipsum dolor sit amet.</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-6 text-center">
+                        <div class="box">
+                            <i class="fas fa-bicycle fa-2x text-secondary"></i>
+                            <h5 class="mt-3 text-secondary">Lorem ipsum dolor sit amet.</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-6 text-center">
+                        <div class="box">
+                            <i class="fas fa-bicycle fa-2x text-secondary"></i>
+                            <h5 class="mt-3 text-secondary">Lorem ipsum dolor sit amet.</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-6 text-center">
+                        <div class="box">
+                            <i class="fas fa-bicycle fa-2x text-secondary"></i>
+                            <h5 class="mt-3 text-secondary">Lorem ipsum dolor sit amet.</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-6 text-center">
+                        <div class="box">
+                            <i class="fas fa-bicycle fa-2x text-secondary"></i>
+                            <h5 class="mt-3 text-secondary">Lorem ipsum dolor sit amet.</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- tab row 2 end -->
+
+            </div>
+            <!-- page3 -->
+            <div id="page3" class="container tab-pane fade"><br>
+                <!-- 上面有container就不用再放一層了啦 -->
+                <!-- <div class="container"> -->
+                <h2>Bordered Table</h2>
+                <p>The .table-bordered class adds borders on all sides of the table and the cells:</p>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>john@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>Mary</td>
+                            <td>Moe</td>
+                            <td>mary@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>July</td>
+                            <td>Dooley</td>
+                            <td>july@example.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- </div> -->
+            <!-- page3 end-->
+
+        </div>
+
+    </div>
+
+
+    <!-- tabs end -->
+
+    <hr>
+    <!-- pills -->
+    <div class="containers mt-5">
+        <ul class="nav nav-pills mb-3 justify-content-around" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <!-- toggle→切換 -->
+                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                    aria-controls="pills-home" aria-selected="true">Home</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+                    aria-controls="pills-profile" aria-selected="false">Profile</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
+                    aria-controls="pills-contact" aria-selected="false">Contact</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="pills-story-tab" data-toggle="pill" href="#pills-story" role="tab"
+                    aria-controls="pills-story" aria-selected="false">Story</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="pills-map-tab" data-toggle="pill" href="#pills-map" role="tab"
+                    aria-controls="pills-map" aria-selected="false">map</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <h3>HOME Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, voluptatibus?</p>
+            </div>
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <h3>PROFILE Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, voluptatibus?</p>
+            </div>
+            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                <h3>CONTACT Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, voluptatibus?</p>
+            </div>
+            <div class="tab-pane fade" id="pills-story" role="tabpanel" aria-labelledby="pills-story-tab">
+                <h3>STORY Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, voluptatibus?</p>
+            </div>
+            <div class="tab-pane fade" id="pills-map" role="tabpanel" aria-labelledby="pills-map-tab">
+                <h3>MAP Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, voluptatibus?</p>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- pills end-->
+
+    <hr>
+    <!-- collapse -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-8">
+                <p>
+                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button"
+                        aria-expanded="false" aria-controls="collapseExample">
+                        Link with href
+                    </a>
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
+                        aria-expanded="false" aria-controls="collapseExample">
+                        Button with data-target
+                    </button>
+                </p>
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                        Some placeholder content for the collapse component. This panel is hidden by default but
+                        revealed
+                        when the user activates the relevant trigger.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 多選 -->
+        <p>
+            <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button"
+                aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2"
+                aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse"
+                aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both
+                elements</button>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".all-multi-collapse"
+                aria-expanded="false"
+                aria-controls="multiCollapseExample1 multiCollapseExample2 multiCollapseExample3 multiCollapseExample4">All
+                btn</button>
+        </p>
+        <div class="row">
+            <div class="col">
+                <div class="collapse multi-collapse all-multi-collapse" id="multiCollapseExample1">
+                    <div class="card card-body">
+                        Some placeholder content for the first collapse component of this multi-collapse example. This
+                        panel is hidden by default but revealed when the user activates the relevant trigger.
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="collapse multi-collapse all-multi-collapse" id="multiCollapseExample2">
+                    <div class="card card-body">
+                        Some placeholder content for the second collapse component of this multi-collapse example. This
+                        panel is hidden by default but revealed when the user activates the relevant trigger.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="collapse all-multi-collapse" id="multiCollapseExample3">
+                    <div class="card card-body">
+                        Some placeholder content for the first collapse component of this multi-collapse example. This
+                        panel is hidden by default but revealed when the user activates the relevant trigger.
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="collapse all-multi-collapse" id="multiCollapseExample4">
+                    <div class="card card-body">
+                        Some placeholder content for the second collapse component of this multi-collapse example. This
+                        panel is hidden by default but revealed when the user activates the relevant trigger.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+        <!-- 多選 end -->
+    </div>
+
+
+    <!-- collapse end -->
+
+
+    <hr>
+    <!-- 嵌入youtube 影片，也一樣是container→row→col -->
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <!-- 秘訣是width設100% -->
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/hgzZ33-P91o"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="col-6">
+                <h3>youtube影片</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur veniam omnis maxime! Labore, sed
+                    quisquam.</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!-- 嵌入巢狀影片及說明 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <!-- 秘訣是width設100% -->
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/hgzZ33-P91o"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="col-9">
+                <!-- bootstrap 4 nest巢狀再放row，不用放container-->
+                <!-- 因為row的本身就有flex，所以可以放justifycontent之類的 -->
+                <div class="row">
+                    <div class="col-4">
+                        <h3>youtube</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, soluta.</p>
+                    </div>
+                    <div class="col-4">
+                        <h3>youtube</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, soluta.</p>
+                    </div>
+                    <div class="col-4">
+                        <h3>youtube</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, soluta.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- 嵌入youtube 影片end -->
+
+    <hr>
+    <!-- google map -->
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <!-- 秘訣是width設100% -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.703649799049!2d121.41732691500657!3d25.04412928396768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a7bec9ad74b1%3A0xa639904a89f26435!2z5Yue5YuV6YOo5Yue5YuV5Yqb55m85bGV572y5YyX5Z-65a6c6Iqx6YeR6aas5YiG572y5rOw5bGx6IG35qWt6KiT57e05aC0!5e0!3m2!1szh-TW!2stw!4v1638421838235!5m2!1szh-TW!2stw"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="col-4">
+                <h3>google map</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur veniam omnis maxime! Labore, sed
+                    quisquam.</p>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+    <!-- 巢狀 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <!-- 秘訣是width設100% -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.703649799049!2d121.41732691500657!3d25.04412928396768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a7bec9ad74b1%3A0xa639904a89f26435!2z5Yue5YuV6YOo5Yue5YuV5Yqb55m85bGV572y5YyX5Z-65a6c6Iqx6YeR6aas5YiG572y5rOw5bGx6IG35qWt6KiT57e05aC0!5e0!3m2!1szh-TW!2stw!4v1638421838235!5m2!1szh-TW!2stw"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="col-4">
+                <div class="row flex-column vh-80">
+                    <div class="col-6">
+                        <h3>google map</h3>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="col-6">
+                        <h3>google map</h3>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <!-- 很簡單的方法，不一定要用col-6 -->
+                    <!-- <h3>google map</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <br>
+                    <h3>google map</h3>
+                    <p>Lorem ipsum dolor sit amet.</p> -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+    <!-- google map end -->
+
+    <!-- gallery -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <div id="image1" class="gbox">
+                    <h3 class="text-white">image1 text</h3>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div id="image2" class="gbox">
+                    <h3 class="text-white">image2 text</h3>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div id="image3" class="gbox">
+                    <h3 class="text-white">image3 text</h3>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <br><br>
+
+    <!-- gallery end -->
+
+    <!-- footer -->
+    <footer class="mt-3 bg-success text-white pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <h4>Lorem ipsum dolor sit amet.</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, adipisci.</p>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h4>Lorem ipsum dolor sit amet.</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, adipisci.</p>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h4>Lorem ipsum dolor sit amet.</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, adipisci.</p>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h4>Lorem ipsum dolor sit amet.</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, adipisci.</p>
+                </div>
+            </div>
+            <div class="mt-5 py-2">
+                <p class="text-center">&copy; Copy right by 泰山熊麻吉</p>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end-->
+
+
+    <!-- bootstrap要用的 -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+        crossorigin="anonymous"></script>
+
+    <!-- tabs js -->
+    <script>
+        $(document).ready(function () {
+            $(".nav-tabs a").click(function () {
+                $(this).tab('show');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

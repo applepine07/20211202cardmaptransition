@@ -1,0 +1,54 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, 'Microsoft JhengHei';
+}
+
+.box {
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: all .5s ease-out;
+    height: 500px;
+    /* background-color: lightblue; */
+}
+
+.box:hover {
+    background: white;
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, .25);
+}
+
+.gbox {
+    height: 250px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.line{
+    width: 40px;
+    height: 6px;
+    border-radius: 3px;
+    margin: 10px auto;
+    transition: all .5s ease;
+}
+
+/* hover 和line之間要空格喔 */
+.box:hover .line{
+    width: 120px;
+}
+
+#image1 {
+    background-image: url('../images/01.jpg');
+    /* background-size: contain; */
+}
+
+#image2 {
+    background-image: url('../images/02.jpg');
+    /* background-size: contain; */
+}
+
+#image3 {
+    background-image: linear-gradient(to bottom right, red,orange,yellow,green,blue,indigo,violet);
+}
